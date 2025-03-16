@@ -7,7 +7,7 @@ function Intro() {
       className="bg-gray-900 text-white flex flex-col items-center h-screen"
       style={{
         overflow: "hidden",
-        maxHeight: "89vh",
+        maxHeight: "87vh",
       }}
     >
       <img

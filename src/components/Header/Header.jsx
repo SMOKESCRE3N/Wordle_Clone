@@ -7,7 +7,7 @@ export default function Header() {
       <img
         src="/wordle photo.png"
         alt="Wordle"
-        className="h-12 w-auto transition-transform transform hover:scale-200"
+        className="h-16 w-auto  p-2.5 transition-transform transform hover:scale-200"
       />
 
       <div>
