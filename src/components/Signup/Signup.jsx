@@ -48,14 +48,16 @@ export default function Signup() {
           </button>
           {submitted ? (
             <>
-              <h2 className="text-xl font-semibold">Welcome {username}</h2>
+              <h2 className="text-xl  text-white font-semibold">
+                Welcome {username}
+              </h2>
               <NavLink
                 to="/play"
                 className={() =>
                   `px-4 py-2 text-white bg-blue-600 rounded-lg duration-300 p-16 ease-in-out hover:bg-blue-500 shadow-md transition-transform`
                 }
               >
-                PlayKD
+                Play
               </NavLink>
             </>
           ) : (
