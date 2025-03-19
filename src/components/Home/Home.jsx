@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Keyboard from "../Keyboard/Keyboard";
 import Grid from "../Grid/Grid";
-import wordList from "../../wordList";
+
+//import wordList from "../../wordList";
+import wordList from "../wordList";
 
 // function Home() {
 //   const [guesses, setGuesses] = useState(Array(6).fill(""));
