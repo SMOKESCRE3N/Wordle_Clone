@@ -3,7 +3,11 @@ import { createRoot } from "react-dom/client";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import {
+  RouterProvider,
+  createBrowserRouter,
+  HashRouter,
+} from "react-router-dom";
 import Layout from "./Layout.jsx";
 import Signup from "./components/Signup/Signup.jsx";
 import Home from "./components/Home/Home.jsx";
@@ -31,6 +35,8 @@ const router = createBrowserRouter([
 ]);
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <HashRouter>
+      <RouterProvider router={router} />
+    </HashRouter>
   </StrictMode>
 );
