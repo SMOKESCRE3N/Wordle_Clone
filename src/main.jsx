@@ -5,15 +5,15 @@ import "./index.css";
 import App from "./App.jsx";
 import {
   RouterProvider,
-  createBrowserRouter,
-  HashRouter,
+  //createBrowserRouter,
+  createHashRouter,
 } from "react-router-dom";
 import Layout from "./Layout.jsx";
 import Signup from "./components/Signup/Signup.jsx";
 import Home from "./components/Home/Home.jsx";
 import Intro from "./components/Intro/Intro.jsx";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Layout />,
@@ -35,8 +35,6 @@ const router = createBrowserRouter([
 ]);
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <HashRouter>
-      <RouterProvider router={router} />
-    </HashRouter>
+    <RouterProvider router={router} />
   </StrictMode>
 );
