@@ -11,7 +11,7 @@ function Intro() {
       }}
     >
       <img
-        src="/wordle1.jpg"
+        src="/wordle1.png"
         alt="Wordle"
         className="h-60 w-auto p-3 mx-auto"
       />

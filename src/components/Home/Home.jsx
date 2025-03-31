@@ -93,13 +93,13 @@ function Home() {
     setGuesses((prevGuesses) => {
       const newGuesses = [...prevGuesses];
 
-      if (key === "BACKSPACE") {
+      if (key === "Backspace") {
         newGuesses[currentRow] = newGuesses[currentRow].slice(0, -1);
       } else if (key.length === 1 && /^[A-Z]$/.test(key)) {
         if (newGuesses[currentRow].length < 5) {
           newGuesses[currentRow] += key;
         }
-      } else if (key === "ENTER") {
+      } else if (key === "Enter") {
         if (newGuesses[currentRow].length !== 5) return prevGuesses;
 
         if (!wordList.includes(newGuesses[currentRow].toUpperCase())) {
@@ -112,7 +112,7 @@ function Home() {
           setGameOver(true);
           return newGuesses;
         }
-
+        
         return newGuesses;
       }
 
@@ -120,7 +120,7 @@ function Home() {
     });
 
     // Move to next row **outside** setGuesses
-    if (key === "ENTER") {
+    if (key === "Enter") {
       setCurrentRow((prevRow) => {
         if (prevRow < 5) return prevRow + 1;
         alert(`Game over! The word was: ${secretWord}`);
@@ -129,11 +129,14 @@ function Home() {
       });
     }
   };
-
+  
   useEffect(() => {
     const handlePhysicalKeyPress = (event) => {
-      const key = event.key.toUpperCase();
-      if (/^[A-Z]$/.test(key) || key === "ENTER" || key === "BACKSPACE") {
+      let key=event.key;
+      if(key.length===1 && key.match(/^[a-z]$/)){
+      key = event.key.toUpperCase();}
+      
+      if (/^[A-Z]$/.test(key) || key === "Enter" || key === "Backspace") {
         handleKeyPress(key);
       }
     };
