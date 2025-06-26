@@ -23,7 +23,7 @@ function Grid({ guesses, secretWord }) {
             return (
               <div
                 key={`${row}-${col}`}
-                className={`w-10 h-10 flex items-center justify-center border-2 border-gray-500 text-3xl font-bold uppercase text-white ${getLetterColor(
+                className={`w-10 h-10 flex items-center justify-center border-2 border-gray-600 text-3xl font-bold uppercase text-white ${getLetterColor(
                   letter,
                   col,
                   row
