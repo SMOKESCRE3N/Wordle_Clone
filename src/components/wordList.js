@@ -18,7 +18,7 @@ const wordList = [
   "sleep", "royal", "chill",  "shore", "tower",
   "touch", "fence","power","drift",
    "angel", "bunny",  "guard",  
-   "bloom",  "event","smart","crash",
+   "bloom",  "event","smart","crash","think","boron","thank",
   "start",
 ];
 export default wordList;
